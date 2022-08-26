@@ -107,6 +107,15 @@ $(function () {
                     }
                 });
             }
+
+            $(window).scroll(function () {
+                var st = $('html,body').scrollTop();
+                if (st > 10) {
+                    $('.index header').addClass('--fix');
+                } else {
+                    $('.index header').removeClass('--fix');
+                }
+            });
         },
 
         //scroll to mail form

@@ -1,12 +1,16 @@
 // Colors
-$main-cl: #8cdcf0;
+$main-cl: #fa8c00;
+$main-cl2: #00148c;
 $b-cl: #000;
 $w-cl: #fff;
 
+
+$inter: 'Inter', sans-serif;
+
 // Font
-$fz-cl: #000;
+$fz-cl: #1e1e1e;
 $fz-base: 10px;
-$fz-body: 14px;
+$fz-body: 18px;
 $lh-body: 1.4;
 $font-body: 'Noto Sans JP', sans-serif;
 // $font-body: "游ゴシック体", "Yu Gothic", YuGothic, sans-serif;
@@ -14,6 +18,6 @@ $font-body: 'Noto Sans JP', sans-serif;
 // Base
 $max-width:100%;
 $container-full-width: 1920px;
-$container-width: 1200px;
+$container-width: 1080px;
 $padding: 15px;
 

@@ -1,74 +1,101 @@
-// .btn {
-//     display: inline-block;
-//     vertical-align: middle;
-//     appearance: none;
-//     -webkit-appearance: none;
-//     -moz-appearance: none;
-//     -ms-appearance: none;
-//     -o-appearance: none;
-//     border: none;
-//     //height: 40px;
-//     width: 100%;
-//     line-height: 20px;
-//     background-color: transparent;
-//     transition: all 0.3s ease;
-//     padding: 10px 0px;
-//     text-align: center;
-//     text-transform: uppercase;
-//     font-weight: bold;
-//     position: relative;
-//     overflow: hidden;
-//     z-index: 0;
-//     outline: 0px;
+.btn{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 440px;
+    max-width: 100%;
+    min-height: 60px;
+    padding: 10px;
+    border-radius: 30px;
+    position: relative;
+    font-weight: 500;
+    font-size: 24px;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    z-index: 0;
+    &:hover {
+        color: $main-cl;
+        box-shadow: 0 0 10px rgba($color: #000000, $alpha: 0.16);
+        background-color: #fff;
 
-//     &:disabled,
-//     &:disabled:hover {
-//         cursor: not-allowed;
-//         color: initial;
-//     }
+        &::before {
+            border-color: $main-cl;
+            right: 18px;
+        }
 
-//     &:hover {
-//         box-shadow: 10px 10px 20px rgba($color: $b-cl, $alpha: 0.16);
-//     }
-// }
+        &::after {
+            opacity: 0;
+        }
+    }
+    &::before {
+        content: "";
+        position: absolute;
+        top: 50%;
+        right: 22px;
+        width: 14px;
+        height: 14px;
+        border: 0px solid #fff;
+        border-width: 0 2px 2px 0;
+        transform: translateY(-50%) rotate(-45deg);
+        transition: all 0.3s ease;
+    }
+
+    &::after {
+        content: "";
+        @include pos-full;
+        background-image: linear-gradient(45deg, #ffb100 10%, #ff9300 90%);
+        transition: all 0.3s ease;
+        z-index: -1;
+    }
+}
+
 
 .hamburger-btn {
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 60px;
     position: relative;
     cursor: pointer;
     display: none;
     z-index: 99;
+    text-align: center;
+    &::before{
+        content: 'menu';
+        color: $main-cl2;
+        font-size: 14px;
+        font-weight: 600;
+        display: block;
+        margin-top: 2px;
+    }
 
     .bar {
-        width: 30px;
+        width: 36px;
         height: 3px;
         position: absolute;
-        top: 50%;
+        top: 62%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background-color: $main-cl;
+        background-color: $main-cl2;
         border-radius: 2px;
         transition: all 0.3s ease;
 
         &::before,
         &::after {
             content: "";
-            width: 30px;
+            width: 36px;
             height: 3px;
             position: absolute;
             left: 0;
             border-radius: 2px;
-            background-color: $main-cl;
+            background-color: $main-cl2;
             transition: all 0.3s ease;
         }
 
         &::before {
-            top: -8px;
+            top: -10px;
         }
 
         &::after {
-            top: 8px;
+            top: 10px;
         }
     }
 
@@ -91,13 +118,11 @@
 
 .scroll-top {
     position: fixed;
-    bottom: 40px;
-    right: 30px;
-    width: 50px;
-    height: 50px;
+    bottom: 0;
+    right: 0;
+    width: 60px;
+    height: 60px;
     background-color: $main-cl;
-    border: 1px $main-cl solid;
-    border-radius: 4px;
     cursor: pointer;
     z-index: 98;
     overflow: hidden;
@@ -111,15 +136,14 @@
     &::before{
         content: "";
         position: absolute;
-        top: 50%;
+        top: 45%;
         left: 50%;
         transform: translate(-50%, -50%);
-        background: url('../images/ic-scrolltop.png') center no-repeat;
-        width: 30px;
-        height: 30px;
-        filter: brightness(0) invert(1);
-        transform: translate(-50%, -50%);
-        transition: all 0.3s ease;
+        width: 0;
+        height: 0;
+        border-style: solid;
+        border-width: 0 20px 20px 20px;
+        border-color: transparent transparent #fff transparent;
     }
 
     &:hover {

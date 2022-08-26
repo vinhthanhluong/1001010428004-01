@@ -1,0 +1,25 @@
+<!-- Global site tag (gtag.js) - Google Analytics -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=UA-33485620-40"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'UA-33485620-40');
+</script>
+
+
+
+・電話：カテゴリ：sp　アクション：tel
+・お問い合わせ：カテゴリ：sp　アクション：contact
+・アクセス：カテゴリ：sp　アクション：map
+
+onclick="gtag('event', 'contact', {'event_category': 'sp'});"
+
+onclick="gtag('event', 'tel', {'event_category': 'sp'});"
+
+font
+noto sans --> 
+Inter --> font-family: 'Inter', sans-serif;
+
+

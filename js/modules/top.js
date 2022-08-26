@@ -4,26 +4,10 @@ $(function () {
 
     var obj = {
         init: function () {
-            this.aos();
             this.wow();
-            // this.visual();
+            this.visual();
         },
 
-        //aos
-        aos: function () {
-            AOS.init({
-                startEvent: 'DOMContentLoaded',
-                offset: 0,
-                duration: 800,
-                delay: '200',
-                easing: 'ease-in-sine',
-                once: true,
-                mirror: true,
-                disable: function () {
-                    return $(window).width() <= 768;
-                },
-            });
-        },
 
         wow: function () {
             var wow = new WOW(
@@ -39,23 +23,38 @@ $(function () {
         },
 
         visual: function () {
-            if ($('#visual').length > 0) {
-                $('#visual').slick({
-                    dots: false,
-                    infinite: true,
-                    speed: 1000,
-                    slidesToShow: 1,
-                    slidesToScroll: 1,
-                    autoplay: true,
-                    autoplaySpeed: 5000,
-                    arrows: false,
-                    centerMode: false,
-                    centerPadding: 0,
-                    pauseOnHover: false,
-                    fade: false,
-                    variableWidth: false,
-                });
-            }
+            $('.visuals-bg').slick({
+                dots: false,
+                infinite: true,
+                speed: 1000,
+                slidesToShow: 1,
+                slidesToScroll: 1,
+                // autoplay: true,
+                // autoplaySpeed: 5000,
+                // centerMode: true,
+                pauseOnHover: false,
+                fade: false,
+                asNavFor: '.visuals-sm',
+            });
+
+            $('.visuals-sm').slick({
+                slidesToShow: 4,
+                slidesToScroll: 1,
+                asNavFor: '.visuals-bg',
+                dots: true,
+                centerMode: true,
+                focusOnSelect: true,
+                infinite: true,
+                vertical: true,
+            });
+
+            // $('.visuals-bg').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+            //     $('.slick-active').prev().addClass('aaaaaaaaaaaaaaaaaaa');
+            // });
+
+            // $('.visuals-bg').on('swiper', function(event, slick){
+            //     $('.slick-active').prev().addClass('aaaaaaaaaaaaaaaaaaa');
+            // });
         },
     }
 
