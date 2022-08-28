@@ -94,6 +94,24 @@
   .footer-bottom .box-re .re-bn3 {
     font-size: 15px;
   }
+
+  .about-solar .sol-itm2 {
+    padding: 53px 30px 40px;
+  }
+  .about-solar .sol-itm2 .abs-img {
+    transform: translateX(9px);
+    margin-bottom: 51px;
+  }
+  .about-solar .sol-itm4.abs-item {
+    padding: 44px 35px 40px 40px;
+  }
+  .about-solar .sol-itm4 .abs-tt {
+    letter-spacing: -1.8px;
+    margin: 4px 0 30px;
+  }
+  .about-solar .sol-itm4 .abs-dsc {
+    letter-spacing: 1.7px;
+  }
 }
 /* end screen-min:751px */
 @media screen and (min-width: 751px) and (max-width: 1919px) {
@@ -201,6 +219,15 @@
 
   .hamburger-btn {
     display: block;
+  }
+
+  .btn {
+    font-size: 16px;
+    min-height: 50px;
+  }
+  .btn::before {
+    width: 10px;
+    height: 10px;
   }
 
   #header {
@@ -404,6 +431,96 @@
   .footer-bottom .fb-list .fb-tg::before {
     top: 5px;
   }
+
+  .index-visual {
+    height: 1000px;
+  }
+
+  .strengths {
+    padding: 50px 0;
+  }
+  .strengths .streng-title {
+    font-size: 24px;
+    margin-bottom: 30px;
+  }
+  .strengths .streng-list {
+    justify-content: center;
+    margin: -15px;
+  }
+  .strengths .streng-list li {
+    margin: 15px;
+  }
+  .strengths .streng-img {
+    margin-bottom: 20px;
+  }
+  .strengths .streng-img img {
+    height: auto;
+  }
+  .strengths .streng-tt {
+    font-size: 20px;
+    margin-bottom: 10px;
+  }
+  .strengths .streng-desc {
+    font-size: 14px;
+  }
+  .strengths .streng-btn {
+    font-size: 16px;
+    min-height: 50px;
+    margin-top: 30px;
+  }
+  .strengths .streng-btn::before {
+    width: 10px;
+    height: 10px;
+  }
+
+  .about-solar {
+    padding: 50px 0;
+  }
+  .about-solar .abs-head {
+    margin-bottom: 30px;
+  }
+  .about-solar .abs-title {
+    font-size: 24px;
+    margin-bottom: 20px;
+  }
+  .about-solar .abs-desc {
+    font-size: 14px;
+  }
+  .about-solar .abs-list {
+    margin: -15px;
+  }
+  .about-solar .abs-list li {
+    margin: 15px;
+    max-width: 100%;
+    width: calc(100% - 30px) !important;
+  }
+  .about-solar .abs-item {
+    padding: 40px 30px;
+  }
+  .about-solar .abs-img {
+    margin-bottom: 30px;
+  }
+  .about-solar .abs-tt {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .about-solar .abs-dsc {
+    font-size: 14px;
+    margin-bottom: 20px;
+  }
+  .about-solar .abs-full .abs-item {
+    padding: 40px 30px;
+  }
+  .about-solar .abs-full .abs-img {
+    float: none;
+  }
+  .about-solar .abs-full .abs-tt {
+    text-align: center;
+    margin: 0 0 20px;
+  }
+  .about-solar .btn {
+    margin: 0 auto;
+  }
 }
 /* end screen-max:750px */
 /* end screen-max:640px */
@@ -465,6 +582,13 @@
   .footer-top .ft-eml {
     height: 38px;
   }
+
+  .about-solar .abs-item {
+    padding: 20px;
+  }
+  .about-solar .abs-full .abs-item {
+    padding: 20px;
+  }
 }
 /* end screen-max:425px */
 /* end screen-max:375px */
@@ -494,7 +618,8 @@
   .footer-top .ft-tt {
     font-size: 20px;
   }
-  .footer-top .ft-desc, .footer-top .ft-time {
+  .footer-top .ft-desc,
+.footer-top .ft-time {
     font-size: 12px;
   }
   .footer-top .ft-number {

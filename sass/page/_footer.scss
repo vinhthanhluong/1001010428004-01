@@ -162,6 +162,7 @@
         width: calc(100% - 530px);
         iframe {
             width: calc(100% + ((100vw - 1080px) / 2));
+            min-width: 650px;
         }
     }
 

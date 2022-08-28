@@ -1102,7 +1102,8 @@ img {
   width: calc(100% - 530px);
 }
 .footer-mid .fm-map iframe {
-  width: calc(100% + (100vw - 1080px) / 2);
+  width: calc(100% + ((100vw - 1080px) / 2));
+  min-width: 650px;
 }
 .footer-mid .fm-item {
   flex-shrink: 0;
@@ -1529,6 +1530,7 @@ img {
 .strengths {
   padding: 117px 0 120px;
   background: url("../images/bg-strengths.jpg") center no-repeat;
+  background-size: cover;
 }
 .strengths .streng-title {
   text-align: center;
@@ -1545,6 +1547,7 @@ img {
 }
 .strengths .streng-list li {
   width: 500px;
+  max-width: 100%;
   margin: 35.5px 40px;
 }
 .strengths .streng-img {
@@ -1561,9 +1564,6 @@ img {
   left: 0;
   border: 4px solid #fff;
   box-sizing: border-box;
-}
-.strengths .streng-img img {
-  height: 320px;
 }
 .strengths .streng-tt {
   text-align: center;
@@ -1622,6 +1622,7 @@ img {
 
 .about-solar {
   background: url("../images/bg-abs.jpg") center no-repeat;
+  background-size: cover;
   padding: 118px 0 122px;
 }
 .about-solar .abs-head {
@@ -1674,13 +1675,6 @@ img {
   line-height: 2;
   letter-spacing: 0.5px;
 }
-.about-solar .sol-itm2 {
-  padding: 53px 30px 40px;
-}
-.about-solar .sol-itm2 .abs-img {
-  transform: translateX(9px);
-  margin-bottom: 51px;
-}
 .about-solar .abs-full .abs-item {
   padding: 38px 29px 42px 30px;
 }
@@ -1694,16 +1688,6 @@ img {
 }
 .about-solar .abs-full .abs-dsc {
   letter-spacing: 1px;
-}
-.about-solar .sol-itm4.abs-item {
-  padding: 44px 35px 40px 40px;
-}
-.about-solar .sol-itm4 .abs-tt {
-  letter-spacing: -1.8px;
-  margin: 4px 0 30px;
-}
-.about-solar .sol-itm4 .abs-dsc {
-  letter-spacing: 1.7px;
 }
 
 .solar-power {
@@ -1887,6 +1871,17 @@ img {
 .construct .const-list li {
   width: calc(25% - 40px);
   margin: 17px 20px;
+  line-height: 0;
+}
+.construct .const-list a {
+  display: block;
+  overflow: hidden;
+}
+.construct .const-list a:hover img {
+  transform: scale(1.1);
+}
+.construct .const-list img {
+  transition: all 0.5s ease;
 }
 .construct .btn {
   margin: 74px auto 0;

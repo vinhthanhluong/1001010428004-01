@@ -288,6 +288,7 @@
 .strengths {
     padding: 117px 0 120px;
     background: url("../images/bg-strengths.jpg") center no-repeat;
+    background-size: cover;
     .streng-title {
         text-align: center;
         margin-bottom: 81px;
@@ -303,11 +304,9 @@
         margin: -35.5px -40px;
         li {
             width: 500px;
+            max-width: 100%;
             margin: 35.5px 40px;
         }
-    }
-
-    .streng-item {
     }
 
     .streng-img {
@@ -320,9 +319,9 @@
             border: 4px solid #fff;
             box-sizing: border-box;
         }
-        img {
-            height: 320px;
-        }
+        // img {
+        //     height: 320px;
+        // }
     }
 
     .streng-tt {
@@ -386,6 +385,7 @@
 
 .about-solar {
     background: url("../images/bg-abs.jpg") center no-repeat;
+    background-size: cover;
     padding: 118px 0 122px;
 
     .abs-head {
@@ -446,13 +446,13 @@
         letter-spacing: 0.5px;
     }
 
-    .sol-itm2 {
-        padding: 53px 30px 40px;
-        .abs-img {
-            transform: translateX(9px);
-            margin-bottom: 51px;
-        }
-    }
+    // .sol-itm2 {
+    //     padding: 53px 30px 40px;
+    //     .abs-img {
+    //         transform: translateX(9px);
+    //         margin-bottom: 51px;
+    //     }
+    // }
 
     .abs-full {
         .abs-item {
@@ -474,20 +474,20 @@
         }
     }
 
-    .sol-itm4 {
-        &.abs-item {
-            padding: 44px 35px 40px 40px;
-        }
+    // .sol-itm4 {
+    //     &.abs-item {
+    //         padding: 44px 35px 40px 40px;
+    //     }
 
-        .abs-tt {
-            letter-spacing: -1.8px;
-            margin: 4px 0 30px;
-        }
+    //     .abs-tt {
+    //         letter-spacing: -1.8px;
+    //         margin: 4px 0 30px;
+    //     }
 
-        .abs-dsc {
-            letter-spacing: 1.7px;
-        }
-    }
+    //     .abs-dsc {
+    //         letter-spacing: 1.7px;
+    //     }
+    // }
 }
 
 .solar-power {
@@ -689,7 +689,24 @@
         li {
             width: calc(25% - 40px);
             margin: 17px 20px;
+            line-height: 0;
         }
+
+        a{
+            display: block;
+            overflow: hidden;
+            &:hover{
+                img{
+                    transform: scale(1.1);
+                }
+            }
+        }
+
+        img{
+            transition: all .5s ease;
+        }
+
+       
     }
 
     .btn {

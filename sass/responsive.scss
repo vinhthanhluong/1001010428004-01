@@ -24,6 +24,7 @@
             h1 {
                 @include visible;
             }
+
             .logo {
                 img {
                     width: 300px;
@@ -32,17 +33,21 @@
             }
         }
     }
+
     .menu-list {
+
         //level 1
-        > li {
+        >li {
             &:hover {
-                > a,
-                > span {
+
+                >a,
+                >span {
                     color: $main-cl;
                 }
             }
-            > a,
-            > span {
+
+            >a,
+            >span {
                 text-shadow: 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff, 0 0 5px #fff;
             }
         }
@@ -50,7 +55,7 @@
 
     .dropdown {
         &:hover {
-            > .sub-menu {
+            >.sub-menu {
                 transform: translateX(0);
                 pointer-events: auto;
                 @include visible;
@@ -58,7 +63,7 @@
             }
         }
 
-        > span {
+        >span {
             pointer-events: none;
         }
     }
@@ -75,14 +80,17 @@
         background-color: $main-cl2;
         color: #fff;
         font-size: 16px;
+
         a,
         span {
             &:hover {
                 background-color: $main-cl;
             }
         }
+
         li {
             border-bottom: 1px solid #fff;
+
             &:last-child {
                 border-bottom: none;
             }
@@ -94,11 +102,12 @@
         }
     }
 
-    //  ========================== END - Headeer ==========================
+    //  ========================== END - Header ==========================
 
     .footer-bottom {
         .box-re {
             padding: 36px 39px 31px;
+
             .re-sm {
                 font-size: 20px;
             }
@@ -119,8 +128,37 @@
             .re-bn2 {
                 margin-top: -4px;
             }
+
             .re-bn3 {
                 font-size: 15px;
+            }
+        }
+    }
+
+    //  ========================== END - Footer ==========================
+
+    .about-solar {
+        .sol-itm2 {
+            padding: 53px 30px 40px;
+
+            .abs-img {
+                transform: translateX(9px);
+                margin-bottom: 51px;
+            }
+        }
+
+        .sol-itm4 {
+            &.abs-item {
+                padding: 44px 35px 40px 40px;
+            }
+
+            .abs-tt {
+                letter-spacing: -1.8px;
+                margin: 4px 0 30px;
+            }
+
+            .abs-dsc {
+                letter-spacing: 1.7px;
             }
         }
     }
@@ -131,8 +169,10 @@
 @media screen and (min-width: 751px) and (max-width: 1919px) {
     #header {
         height: 80px;
+
         .logo {
             margin-top: 35px;
+
             img {
                 width: 260px;
                 height: auto;
@@ -159,10 +199,12 @@
     .header-phone {
         width: 220px;
         padding-right: 18px;
+
         .hphone-number {
             font-size: 17px;
             letter-spacing: 0;
         }
+
         .hphone-time {
             font-size: 11px;
             letter-spacing: 0;
@@ -171,12 +213,14 @@
 
     .header-contact {
         width: 200px;
+
         &::before {
             width: 50px;
             height: 50px;
             transform: translateX(3px);
             margin-right: 7px;
         }
+
         .hcontact-jp {
             font-size: 16px;
         }
@@ -201,6 +245,7 @@
     }
 
     .menu-list {
+
         li,
         span {
             font-size: 16px;
@@ -283,19 +328,32 @@
         display: block;
     }
 
+    .btn {
+        font-size: 16px;
+        min-height: 50px;
+
+        &::before {
+            width: 10px;
+            height: 10px;
+        }
+    }
+
     // ========================== END Base code ==========================
 
     //  ========================== Header ==========================
     #header {
         height: 60px;
         background-color: #fff;
+
         .logo {
             margin: 0;
+
             a {
                 height: 100%;
                 display: flex;
                 align-items: center;
             }
+
             img {
                 width: 230px;
                 height: auto;
@@ -307,6 +365,7 @@
             margin: 0 auto 30px;
         }
     }
+
     .header-wrapper {
         padding: 0 15px;
         border-bottom: 2px solid $main-cl;
@@ -337,9 +396,10 @@
         margin-bottom: 30px;
 
         // level 1
-        > li {
-            > a,
-            > span {
+        >li {
+
+            >a,
+            >span {
                 border-bottom: 1px solid #ebebeb;
                 font-size: 14px;
                 font-weight: bold;
@@ -350,7 +410,7 @@
                 position: relative;
             }
 
-            > span {
+            >span {
                 padding-right: 40px;
             }
         }
@@ -404,6 +464,7 @@
         margin: 0 0 15px;
         justify-content: center;
         padding: 15px 10px;
+
         &::before {
             background-image: url("../images/svg/ic-phone-b.svg");
         }
@@ -414,9 +475,10 @@
         clip-path: none;
         padding: 15px 10px;
     }
+
     //  ========================== END - Header ==========================
     #footer {
-        .copyright{
+        .copyright {
             padding: 30px 0;
         }
     }
@@ -431,6 +493,7 @@
 
         .ft-btn {
             justify-content: center;
+
             li {
                 width: 400px;
                 padding: 15px 20px;
@@ -465,87 +528,202 @@
 
     .footer-bottom {
         padding: 40px 0 0;
-        .fb-wrapper{
+
+        .fb-wrapper {
             flex-wrap: wrap;
         }
 
-        .fb-col{
+        .fb-col {
             width: 100%;
         }
 
-        .fb-re{
+        .fb-re {
             width: 100%;
             margin-top: 30px;
         }
 
-        .fb-df{
+        .fb-df {
             flex-wrap: wrap;
         }
 
-        .fb-title{
+        .fb-title {
             margin-bottom: 20px;
             padding-bottom: 15px;
         }
 
-        .fb-item{
+        .fb-item {
             width: 100%;
         }
 
-        .fb-btn{
+        .fb-btn {
             width: 100%;
             margin-bottom: 25px;
             font-size: 14px;
         }
 
-        .fb-itm-lt{
+        .fb-itm-lt {
             margin-bottom: 30px;
         }
 
-        .fb-itm-rt{
+        .fb-itm-rt {
             padding-left: 0;
         }
 
-        .fb-list{
+        .fb-list {
             font-size: 14px;
-            > li{
+
+            >li {
                 margin-bottom: 15px;
                 padding-bottom: 15px;
             }
 
-            .fb-tn{
-                &::before{
+            .fb-tn {
+                &::before {
                     top: 3px;
                 }
             }
 
-            .fb-tg{
-                &::before{
+            .fb-tg {
+                &::before {
                     top: 5px;
                 }
             }
         }
     }
+
+    //  ========================== END - Footer ==========================
+    .index-visual {
+        height: 1000px;
+    }
+
+    .strengths {
+        padding: 50px 0;
+
+        .streng-title {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .streng-list {
+            justify-content: center;
+            margin: -15px;
+
+            li {
+                margin: 15px;
+            }
+        }
+
+        .streng-img {
+            margin-bottom: 20px;
+
+            img {
+                height: auto;
+            }
+        }
+
+        .streng-tt {
+            font-size: 20px;
+            margin-bottom: 10px;
+        }
+
+        .streng-desc {
+            font-size: 14px;
+        }
+
+        .streng-btn {
+            font-size: 16px;
+            min-height: 50px;
+            margin-top: 30px;
+
+            &::before {
+                width: 10px;
+                height: 10px;
+            }
+        }
+
+
+    }
+
+    .about-solar {
+        padding: 50px 0;
+
+        .abs-head {
+            margin-bottom: 30px;
+        }
+
+        .abs-title {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        .abs-desc {
+            font-size: 14px;
+        }
+
+        .abs-list {
+            margin: -15px;
+            li {
+                margin: 15px;
+                max-width: 100%;
+                width: calc(100% - 30px) !important;
+            }
+        }
+
+        .abs-item {
+            padding: 40px 30px;
+        }
+
+        .abs-img {
+            margin-bottom: 30px;
+        }
+
+        .abs-tt {
+            font-size: 20px;
+            margin-bottom: 20px;
+        }
+
+        .abs-dsc {
+            font-size: 14px;
+            margin-bottom: 20px;
+        }
+
+        .abs-full {
+            .abs-item {
+                padding: 40px 30px;
+            }
+
+            .abs-img {
+                float: none;
+            }
+
+            .abs-tt {
+                text-align: center;
+                margin: 0 0 20px;
+            }
+        }
+
+        .btn {
+            margin: 0 auto;
+        }
+
+    }
 }
 
 /* end screen-max:750px */
 
-@include max-media(640px) {
-}
+@include max-media(640px) {}
 
 /* end screen-max:640px */
 
-@include max-media(560px) {
-}
+@include max-media(560px) {}
 
 /* end screen-max:560px */
 
-@include max-media(520px) {
-}
+@include max-media(520px) {}
 
 /* end screen-max:520px */
 
-@include max-media(475px) {
-}
+@include max-media(475px) {}
 
 /* end screen-max:475px */
 
@@ -560,10 +738,12 @@
             letter-spacing: 0;
         }
     }
+
     #header {
         .box-youtube {
             width: 280px;
             height: 280px;
+
             .ytb-tt {
                 font-size: 18px;
             }
@@ -583,6 +763,7 @@
         .ft-title {
             margin-bottom: 20px;
         }
+
         .ft-btn {
             li {
                 padding: 15px 10px;
@@ -613,22 +794,33 @@
             margin-bottom: 0;
         }
 
-        .ft-email{
-            .ft-tt{
+        .ft-email {
+            .ft-tt {
                 margin-bottom: 8px;
             }
         }
 
-        .ft-eml{
+        .ft-eml {
             height: 38px;
+        }
+    }
+    
+    .about-solar {
+        .abs-item{
+            padding: 20px;
+        }
+
+        .abs-full{
+            .abs-item{
+                padding: 20px;
+            }
         }
     }
 }
 
 /* end screen-max:425px */
 
-@include max-media(375px) {
-}
+@include max-media(375px) {}
 
 /* end screen-max:375px */
 
@@ -640,8 +832,10 @@
             }
         }
     }
+
     .box-re {
         padding: 20px 15px;
+
         .re-btn {
             margin-bottom: 15px;
         }
@@ -668,7 +862,8 @@
             font-size: 20px;
         }
 
-        .ft-desc  , .ft-time{
+        .ft-desc,
+        .ft-time {
             font-size: 12px;
         }
 
@@ -683,16 +878,14 @@
 /*============================= HACK CSS =============================*/
 
 /* IE */
-@media (-ms-high-contrast: none), (-ms-high-contrast: active) {
-}
+@media (-ms-high-contrast: none),
+(-ms-high-contrast: active) {}
 
 /* EGDE */
-@supports (-ms-ime-align: auto) {
-}
+@supports (-ms-ime-align: auto) {}
 
 /* FIREFOX */
-@-moz-document url-prefix() {
-}
+@-moz-document url-prefix() {}
 
 /* Safari 10.1+ (which is the latest version of Safari at this time) */
 @media not all and (min-resolution: 0.001dpcm) {
